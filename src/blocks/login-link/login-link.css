@@ -1,0 +1,15 @@
+@import url(./_position/login-link_position_header.css);
+@import url(./_position/login-link_position_reg.css);
+
+.login-link {
+  font-family: 'Inter', ‘Arial’, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  opacity: 0.6;
+}

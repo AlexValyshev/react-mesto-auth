@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Header from '../components/Header';
 import Main from '../components/Main';
 import Footer from '../components/Footer';
@@ -7,6 +8,8 @@ import EditProfilePopup from '../components/EditProfilePopup';
 import EditAvatarPopup from '../components/EditAvatarPopup';
 import AddPlacePopup from '../components/AddPlacePopup';
 import DeleteCardPopup from '../components/DeleteCardPopup';
+import Register from '../components/Register';
+import Login from '../components/Login';
 import { api } from '../utils/api.js';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 import UserAvatar from '../images/iv-custo.jpg'
@@ -27,6 +30,7 @@ function App() {
     avatar: UserAvatar,
   }
   const [currentUser, setCurrentUser] = React.useState(initialUserInfo);
+  const [isLoggedIn, setLoggedIn] = React.useState(true);
 
   function handleEditAvatarClick() {
     setChangeAvatarPopupOpen(true);
@@ -161,45 +165,61 @@ function App() {
   }, []);
 
   return (
-    <div className = "page">
-      <Header />
+    <BrowserRouter>
+      <div className="page">
       <CurrentUserContext.Provider value={currentUser}>
-        <Main onEditProfile={handleEditProfileClick}
-          onAddPlace={handleAddPlaceClick}
-          onEditAvatar={handleEditAvatarClick}
-          onCardClick={handleCardClick}
-          onTrashClick={handleTrashClick}
-          cards={cards}
-          onCardLike={handleCardLike} />
+          <Header isLoggedIn={isLoggedIn} />
+          {isLoggedIn &&
+            <Main onEditProfile={handleEditProfileClick}
+              onAddPlace={handleAddPlaceClick}
+              onEditAvatar={handleEditAvatarClick}
+              onCardClick={handleCardClick}
+              onTrashClick={handleTrashClick}
+              cards={cards}
+              onCardLike={handleCardLike} />}
 
-        <EditProfilePopup isOpen={isEditProfilePopupOpen ? isOpen : false}
-          onClose={closeAllPopups}
-          onUpdateUser={handleUpdateUser}
-          onCloseOverlay={handleOverlayClose}
-          isLoad={isLoad} />
+          <EditProfilePopup isOpen={isEditProfilePopupOpen ? isOpen : false}
+            onClose={closeAllPopups}
+            onUpdateUser={handleUpdateUser}
+            onCloseOverlay={handleOverlayClose}
+            isLoad={isLoad} />
 
-        <AddPlacePopup isOpen={isAddImagePopupOpen ? isOpen : false}
-          onClose={closeAllPopups}
-          onAddPlace={handleAddPlaceSubmit}
-          onCloseOverlay={handleOverlayClose}
-          isLoad={isLoad} />
+          <AddPlacePopup isOpen={isAddImagePopupOpen ? isOpen : false}
+            onClose={closeAllPopups}
+            onAddPlace={handleAddPlaceSubmit}
+            onCloseOverlay={handleOverlayClose}
+            isLoad={isLoad} />
 
-        <EditAvatarPopup isOpen={isChangeAvatarPopupOpen ? isOpen : false}
-          onClose={closeAllPopups}
-          onUpdateAvatar={handleUpdateAvatar}
-          onCloseOverlay={handleOverlayClose}
-          isLoad={isLoad} />
+          <EditAvatarPopup isOpen={isChangeAvatarPopupOpen ? isOpen : false}
+            onClose={closeAllPopups}
+            onUpdateAvatar={handleUpdateAvatar}
+            onCloseOverlay={handleOverlayClose}
+            isLoad={isLoad} />
 
-        <ImagePopup card={selectedCard} onClose={closeAllPopups} onCloseOverlay={handleOverlayClose} />
+          <ImagePopup card={selectedCard} onClose={closeAllPopups} onCloseOverlay={handleOverlayClose} />
 
-        <DeleteCardPopup isOpen={isTrashPopupOpen ? isOpen : false}
-          onClose={closeAllPopups}
-          card={selectedCard}
-          onCardDelete={handleCardDelete}
-          onCloseOverlay={handleOverlayClose} />
-      </CurrentUserContext.Provider>
-      <Footer />
-    </div >
+          <DeleteCardPopup isOpen={isTrashPopupOpen ? isOpen : false}
+            onClose={closeAllPopups}
+            card={selectedCard}
+            onCardDelete={handleCardDelete}
+            onCloseOverlay={handleOverlayClose} />
+
+          <Switch>
+            <Route path="/sign-up">
+              <Register />
+            </Route>
+            <Route path="/sign-in">
+              <Login />
+            </Route>
+            <Route exact path="/">
+              {isLoggedIn ? <Redirect to="/sign-in" /> : <Redirect to="/sign-up" />}
+            </Route>
+          </Switch>
+
+        </CurrentUserContext.Provider>
+        {isLoggedIn && <Footer />}
+      </div >
+    </BrowserRouter>
   );
 }
 
