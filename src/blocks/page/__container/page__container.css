@@ -1,0 +1,15 @@
+.page__container {
+  max-width: 882px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 618px) and  (max-width: 929px) {
+  .page__container {
+    width: 582px;
+  }
+}
+
+
+
+

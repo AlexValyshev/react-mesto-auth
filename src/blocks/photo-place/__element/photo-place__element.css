@@ -1,0 +1,11 @@
+.photo-place__element {
+  margin: 0;
+  font-size: 0;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}

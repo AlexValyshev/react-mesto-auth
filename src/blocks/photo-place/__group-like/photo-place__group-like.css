@@ -1,0 +1,5 @@
+.photo-place__group-like {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}

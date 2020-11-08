@@ -1,0 +1,25 @@
+.photo-place__trash {
+  min-width: 18px;
+  height: 19px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  background-image: url('./../../../images/trash.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: opacity 0.3s linear;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  display: none;
+}
+
+.photo-place__trash:hover {
+  opacity: 0.6;
+  outline: none;
+}
+
+.photo-place__trash:focus {
+  outline: none;
+}

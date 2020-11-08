@@ -1,0 +1,19 @@
+@import url(./__container/page__container.css);
+
+.page {
+  width: 100%;
+  min-width: 300px;
+  background: #000000;
+  padding-top: 45px;
+  padding-bottom: 56px;
+  font-family: 'Inter', 'Arial', sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media screen and  (max-width: 617px) {
+  .page {
+    padding-top: 28px;
+    padding-bottom: 33px;
+  }
+}

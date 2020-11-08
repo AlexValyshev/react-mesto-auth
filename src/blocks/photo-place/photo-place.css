@@ -1,0 +1,25 @@
+@import url(./__elements/photo-place__elements.css);
+@import url(./__element/photo-place__element.css);
+@import url(./__image/photo-place__image.css);
+@import url(./__group/photo-place__group.css);
+@import url(./__title/photo-place__title.css);
+@import url(./__like/photo-place__like.css);
+@import url(./__like/_active/photo-place__like_active.css);
+@import url(./__trash/photo-place__trash.css);
+@import url(./__trash/_visible/photo-place__trash_visible.css);
+@import url(./__group-like/photo-place__group-like.css);
+@import url(./__number-likes/photo-place__number-likes.css);
+
+.photo-place {
+  /* border: 1px solid blue; */
+}
+
+@media screen and (max-width: 617px) {
+  .photo-place {
+    padding: 0 calc((100% - 282px)/2);
+  }
+}
+
+
+
+

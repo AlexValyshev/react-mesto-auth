@@ -1,0 +1,14 @@
+.popup__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.7s, opacity 0.7s ease-in-out;
+  cursor: auto;
+}
+
+
+
+

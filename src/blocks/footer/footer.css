@@ -1,0 +1,11 @@
+@import url(./__copyright/footer__copyright.css);
+
+.footer {
+
+}
+
+@media screen and (max-width: 617px) {
+  .footer {
+    padding: 0 calc((100% - 282px)/2);
+  }
+}

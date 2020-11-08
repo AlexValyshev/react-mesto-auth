@@ -1,0 +1,4 @@
+.popup__form {
+  max-width: calc((358/430)*100%);
+  margin: 0 auto;
+}

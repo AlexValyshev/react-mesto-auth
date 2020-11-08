@@ -1,0 +1,7 @@
+.photo-place__group {
+  width: calc((240/282)*100%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

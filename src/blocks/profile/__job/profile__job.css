@@ -1,0 +1,22 @@
+.profile__job {
+  /* height: 18px; */
+  margin: 0;
+  padding-left: 1px;
+  font-family: 'Inter', ‘Arial’, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and  (max-width: 617px) {
+  .profile__job {
+    line-height: 17px;
+    font-size: 14px;
+    text-align: center;
+  }
+}

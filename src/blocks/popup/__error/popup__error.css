@@ -1,0 +1,18 @@
+.popup__error {
+  height: 15px;
+  box-sizing: border-box;
+  font-family: 'Inter', ‘Arial’, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FF0000;
+  margin-bottom: 15px;
+  display: block;
+  visibility: hidden;
+}
+
+.popup__error:last-child {
+  margin-bottom: 0;
+}
+

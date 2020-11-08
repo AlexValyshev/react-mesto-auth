@@ -1,0 +1,11 @@
+.photo-place__elements {
+  margin: 0 auto;
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: repeat(auto-fit, 282px);
+  grid-column-gap: 18px;
+  grid-row-gap: 20px;
+}
+

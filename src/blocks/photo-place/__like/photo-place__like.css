@@ -1,0 +1,25 @@
+.photo-place__like {
+  min-width: 21px;
+  height: 19px;
+  /* align-self: center; */
+  margin-bottom: 3px;
+  /* margin-right: 1px; */
+  padding: 0;
+  border: none;
+  background: transparent;
+  background-image: url('./../../../images/like.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: opacity 0.3s linear;
+}
+
+.photo-place__like:hover {
+  opacity: 0.6;
+  outline: none;
+}
+
+.photo-place__like:focus {
+  outline: none;
+}
+
