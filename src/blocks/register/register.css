@@ -9,6 +9,7 @@
 @import url(./__button/_disabled/register__button_disabled.css);
 @import url(./__signin/register__signin.css);
 @import url(./__reg/register__reg.css);
+@import url(./__link/register__link.css);
 
 
 
@@ -19,4 +20,5 @@
   max-width: 358px;
   margin: 0 auto;
   padding: 60px 0 80px;
+  height: 100vh;
 }

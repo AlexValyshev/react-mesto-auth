@@ -1,4 +1,8 @@
 @import url(./__logo/header__logo.css);
+@import url(./__login/header__login.css);
+@import url(./__email/header__email.css);
+@import url(./__logged/header__logged.css);
+@import url(./__logged/_color/header__logged_color.css);
 
 .header {
   position: relative;

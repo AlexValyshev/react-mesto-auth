@@ -1,0 +1,15 @@
+.header__logged {
+  font-family: 'Inter', ‘Arial’, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #A9A9A9;
+  text-decoration: none;
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: right;
+}
+
+.header__logged:hover {
+  opacity: 0.6;
+}

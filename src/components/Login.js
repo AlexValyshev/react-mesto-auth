@@ -1,14 +1,10 @@
 import React from 'react';
-import RegisterWithForm from '../components/RegisterWithForm'
+import RegisterWithForm from './RegisterWithForm';
 
-function Login({ isOpen, onClose, onSubmit }) {
-
+function Login({ isLoggedIn, onLogin }) {
   return (
-      <RegisterWithForm title='Вход' name='Войти'
-          isOpen={isOpen}
-          onClose={onClose}
-          onSubmit={onSubmit} >
-      </RegisterWithForm>
+    <RegisterWithForm title='Вход' name='Войти' isLoggedIn={isLoggedIn} onRegLog={onLogin}>
+    </RegisterWithForm>
   );
 }
 

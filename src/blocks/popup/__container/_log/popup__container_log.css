@@ -1,0 +1,9 @@
+.popup__container_log {
+  width: 430px;
+  box-sizing: border-box;
+  padding: 60px 36px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

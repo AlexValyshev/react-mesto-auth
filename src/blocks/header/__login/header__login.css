@@ -1,0 +1,5 @@
+.header__login {
+  display: flex;
+  margin-top: 6px;
+  align-self: flex-start;
+}
